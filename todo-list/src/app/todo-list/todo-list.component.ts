@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TodoService } from '../TodoService.service';
+import { Task } from '../task';
 
 @Component({
   selector: 'app-todo-list',
@@ -11,5 +12,17 @@ export class TodoListComponent {
 
   addNewTask() {
     this.todoService.onAddNewTask();
+  }
+
+  deleteTask(task: Task) {
+    this.todoService.onDeleteTask(task);
+  }
+
+  clearList() {
+    this.todoService.onClearList();
+  }
+
+  taskDone(task: Task) {
+    this.todoService.onTaskDone(task);
   }
 }
