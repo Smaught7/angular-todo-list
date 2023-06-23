@@ -1,9 +1,9 @@
-<div class="container-fluid text-center py-5 todo-header">
-  <div class="row">
-    <h1>TODO LIST</h1>
-    <p>Create own Todo list and manage them</p>
-  </div>
-  <div class="row mx-5">
+<div class="container-fluid text-center todo-header">
+  <div class="row mx-5 my-6">
+    <div class="col-md-12">
+      <h1>TODO LIST</h1>
+      <p>Create own Todo list and manage them</p>
+    </div>
     <div class="col-md-6">
       <div class="input-group align-items-center">
         <label for="task">Create task:</label>
@@ -24,6 +24,19 @@
     </div>
     <div class="col-md-2">
       <button class="btn btn-primary">+</button>
+    </div>
+  </div>
+  <div class="row px-5 mt-5 tasks-container d-flex justify-content-start gx-2">
+    <div
+      class="card"
+      style="width: 15rem; height: 15rem"
+      *ngFor="let task of todoService.tasksList"
+    >
+      <div class="card-body align-items-center">
+        <p class="card-text">{{ task.text }}</p>
+        <button class="btn btn-primary">Approved</button>
+        <button class="btn btn-danger">Delete</button>
+      </div>
     </div>
   </div>
 </div>
