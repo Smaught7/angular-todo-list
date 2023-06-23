@@ -1,0 +1,10 @@
+.todo-header {
+  background-color: #1e272e;
+  color: #4bcffa;
+  height: 100vh;
+}
+
+.tasks-container {
+  background-color: #808e9b;
+  height: 80vh;
+}
