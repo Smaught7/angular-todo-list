@@ -8,3 +8,43 @@
   background-color: #808e9b;
   height: 80vh;
 }
+
+.task-completed {
+  background-color: #05c46b;
+  border-color: #05c46b;
+  color: #fff;
+}
+
+.task-completed_icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #00000070;
+  z-index: 1;
+  font-size: 9rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.card-data {
+  background-color: #0fbcf9;
+  color: #fff;
+  padding: 12px;
+}
+
+.card-custom {
+  width: 250px;
+  height: 250px;
+  padding: 0;
+  border: 0;
+}
+
+.btn-group .btn-success {
+  border-top-left-radius: 0;
+}
+
+.btn-group .btn-danger {
+  border-top-right-radius: 0;
+}
