@@ -29,22 +29,52 @@
 }
 
 .card-data {
-  background-color: #0fbcf9;
-  color: #fff;
+  background-color: #1e272e;
+  color: #4bcffa;
   padding: 12px;
 }
 
 .card-custom {
+  margin: 25px;
   width: 250px;
   height: 250px;
   padding: 0;
-  border: 0;
+  border: 25px;
+  background-color: #485460;
+  color: #4bcffa;
+  font-weight: 700;
+  box-shadow: 0px 20px 38px 8px rgba(30, 39, 46, 1);
 }
 
-.btn-group .btn-success {
+input {
+  background-color: #485460;
+  border-radius: 10px;
+  border-color: #4bcffa;
+}
+
+input[type="date"] {
+  color: #4bcffa;
+}
+
+::placeholder {
+  color: #4bcffa;
+}
+
+.btn-group .btn-custom {
+  background-color: #1e272e;
+  color: #4bcffa;
+  border: 1px solid #4bcffa;
+  transition: ease 0.5s;
+}
+
+.btn-group .btn-custom:hover {
+  background-color: #485460;
+}
+
+.btn-group .btn-approve {
   border-top-left-radius: 0;
 }
 
-.btn-group .btn-danger {
+.btn-group .btn-delete {
   border-top-right-radius: 0;
 }
