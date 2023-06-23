@@ -8,9 +8,22 @@ interface Task {
   providedIn: 'root',
 })
 export class TodoService {
-  public tasksList: Task[] = [
-    { id: 1, text: 'wyprowadzic psa', data: new Date() },
-    { id: 2, text: 'umyc naczynia', data: new Date() },
-  ];
+  public tasksList: Task[] = [];
+  public taskItem = '';
+  public taskData = new Date();
+
   constructor() {}
+
+  onAddNewTask() {
+    const task = {
+      id: Math.floor(Math.random() * 100 + 1),
+      text: this.taskItem,
+      data: this.taskData,
+    };
+
+    this.tasksList.push(task);
+
+    this.taskItem = '';
+    this.taskData = new Date();
+  }
 }

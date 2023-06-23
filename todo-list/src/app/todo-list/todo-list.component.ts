@@ -7,8 +7,9 @@ import { TodoService } from '../TodoService.service';
   styleUrls: ['./todo-list.component.css'],
 })
 export class TodoListComponent {
-  public taskItem = '';
-  public taskData = '';
-
   constructor(public todoService: TodoService) {}
+
+  addNewTask() {
+    this.todoService.onAddNewTask();
+  }
 }
