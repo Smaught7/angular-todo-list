@@ -1,14 +1,15 @@
 .tasks-container {
   background-color: #808e9b;
   margin: 0;
+  justify-content: start;
 }
 
 .card-custom {
-  margin: 25px;
+  margin: 1.5rem;
   width: 250px;
   height: 250px;
   padding: 0;
-  border: 25px;
+  border: 1.5rem;
   background-color: #485460;
   color: #4bcffa;
   font-weight: 700;
@@ -21,7 +22,7 @@
   height: 100%;
   background-color: #00000070;
   z-index: 1;
-  font-size: 9rem;
+  font-size: 10rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -33,7 +34,13 @@
 .card-data {
   background-color: #1e272e;
   color: #4bcffa;
-  padding: 12px;
+  padding: 0.75rem;
+  margin: 0;
+}
+
+.card-text {
+  margin: 0;
+  padding: 0.25rem;
 }
 
 .btn-group .btn-custom {
@@ -53,4 +60,10 @@
 
 .btn-group .btn-delete {
   border-top-right-radius: 0;
+}
+
+@media screen and (max-width: 630px) {
+  .tasks-container {
+    justify-content: center;
+  }
 }

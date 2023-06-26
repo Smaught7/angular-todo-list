@@ -5,15 +5,17 @@
 }
 
 .todo-header button:first-child {
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
+
 label {
-  margin-right: 10px;
+  margin-right: 0.625rem;
+  min-width: 85px;
 }
 
 input {
   background-color: #485460;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   border-color: #4bcffa;
   color: #4bcffa;
 }
@@ -34,10 +36,22 @@ input[type="date"] {
 .btn-add_task {
   background: #3c40c6;
   border-color: #3c40c6;
+  transition: ease 0.5s;
+}
+
+.btn-add_task:hover {
+  background: #1b1e7e;
+  border-color: #1b1e7e;
 }
 
 .btn-clear_all {
   background: #575fcf;
   border-color: #575fcf;
   color: #fff;
+  transition: ease 0.5s;
+}
+
+.btn-clear_all:hover {
+  background: #4047af;
+  border-color: #4047af;
 }

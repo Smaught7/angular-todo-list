@@ -1,4 +1,4 @@
-<div class="container-fluid text-center todo-header py-5">
+<div class="container-fluid text-center todo-header pt-5 pb-3">
   <div class="row">
     <div class="col-md-12">
       <h1>TODO LIST</h1>
@@ -6,7 +6,7 @@
     </div>
   </div>
   <div class="row mt-4 d-flex justify-content-center">
-    <div class="col-lg-3 col-md-6 col-xs-1">
+    <div class="col-lg-3 col-md-6 col-xs-1 py-2">
       <div class="input-group align-items-center">
         <label for="task">Create task:</label>
         <input
@@ -16,11 +16,11 @@
           id="task"
           placeholder="Create your task"
           class="form-control"
-          [(ngModel)]="todoService.taskItem"
+          [(ngModel)]="todoService.taskText"
         />
       </div>
     </div>
-    <div class="col-lg-2 col-md-4 col-xs-1">
+    <div class="col-lg-2 col-md-4 col-xs-1 py-2">
       <div class="input-group align-items-center">
         <label for="date" class="mr-2">Pick date:</label>
         <input
@@ -33,11 +33,11 @@
         />
       </div>
     </div>
-    <div class="col-lg-2 col-md-3 col-xs-2">
+    <div class="col-lg-2 col-md-4 col-xs-2 py-2">
       <button
         class="btn btn-primary btn-add_task"
         (click)="addNewTask()"
-        [disabled]="!todoService.taskItem"
+        [disabled]="!todoService.taskText"
       >
         Add Task
       </button>

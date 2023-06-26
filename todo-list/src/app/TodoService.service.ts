@@ -6,22 +6,31 @@ import { Task } from './task';
 })
 export class TodoService {
   public tasksList: Task[] = [];
-  public taskItem = '';
+  public taskText = '';
   public taskData = new Date();
+  private readonly maxLength = 150;
 
   constructor() {}
+
+  formatText() {
+    if (this.taskText.length >= this.maxLength) {
+      return this.taskText.slice(0, this.maxLength) + '...';
+    } else {
+      return this.taskText;
+    }
+  }
 
   onAddNewTask() {
     const task: Task = {
       id: Math.floor(Math.random() * 100 + 1),
-      text: this.taskItem,
+      text: this.formatText(),
       data: this.taskData,
       done: false,
     };
 
     this.tasksList.push(task);
 
-    this.taskItem = '';
+    this.taskText = '';
     this.taskData = new Date();
   }
 
