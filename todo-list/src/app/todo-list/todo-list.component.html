@@ -1,10 +1,12 @@
-<div class="container-fluid text-center todo-header">
-  <div class="row mx-5 my-6">
+<div class="container-fluid text-center todo-header pt-5 pb-3">
+  <div class="row">
     <div class="col-md-12">
       <h1>TODO LIST</h1>
       <p>Create own Todo list and manage them</p>
     </div>
-    <div class="col-md-6">
+  </div>
+  <div class="row mt-4 d-flex justify-content-center">
+    <div class="col-lg-3 col-md-6 col-xs-1 py-2">
       <div class="input-group align-items-center">
         <label for="task">Create task:</label>
         <input
@@ -14,11 +16,11 @@
           id="task"
           placeholder="Create your task"
           class="form-control"
-          [(ngModel)]="todoService.taskItem"
+          [(ngModel)]="todoService.taskText"
         />
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-lg-2 col-md-4 col-xs-1 py-2">
       <div class="input-group align-items-center">
         <label for="date" class="mr-2">Pick date:</label>
         <input
@@ -31,55 +33,22 @@
         />
       </div>
     </div>
-    <div class="col-md-2">
+    <div class="col-lg-2 col-md-4 col-xs-2 py-2">
       <button
-        class="btn btn-primary"
+        class="btn btn-primary btn-add_task"
         (click)="addNewTask()"
-        [disabled]="!todoService.taskItem"
+        [disabled]="!todoService.taskText"
       >
-        Add
+        Add Task
       </button>
       <button
-        class="btn btn-warning"
+        class="btn btn-warning btn-clear_all"
         (click)="clearList()"
         [disabled]="todoService.tasksList.length === 0"
       >
-        Clear
+        Clear All
       </button>
     </div>
   </div>
-  <div class="row px-5 mt-5 tasks-container d-flex justify-content-start">
-    <div
-      class="card card-custom"
-      *ngFor="let task of todoService.tasksList"
-      [class.task-completed]="task.done"
-    >
-      <i
-        class="bi bi-check-circle"
-        *ngIf="task.done"
-        [class.task-completed_icon]="task.done"
-        (click)="taskDone(task)"
-      ></i>
-      <div class="card-body d-flex flex-column justify-content-between p-0">
-        <p class="card-data">{{ task.data | date }}</p>
-        <p class="card-text">{{ task.text }}</p>
-        <div class="btn-group">
-          <button
-            class="btn btn-custom btn-approve"
-            (click)="taskDone(task)"
-            [disabled]="task.done"
-          >
-            <i class="bi bi-check-circle"></i>
-          </button>
-          <button
-            class="btn btn-custom btn-delete"
-            (click)="deleteTask(task)"
-            [disabled]="task.done"
-          >
-            <i class="bi bi-trash2"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
+<app-todo-item></app-todo-item>

@@ -14,15 +14,7 @@ export class TodoListComponent {
     this.todoService.onAddNewTask();
   }
 
-  deleteTask(task: Task) {
-    this.todoService.onDeleteTask(task);
-  }
-
   clearList() {
     this.todoService.onClearList();
-  }
-
-  taskDone(task: Task) {
-    this.todoService.onTaskDone(task);
   }
 }
