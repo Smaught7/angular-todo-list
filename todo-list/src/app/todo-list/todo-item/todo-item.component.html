@@ -1,0 +1,36 @@
+<div class="row py-1 px-5 tasks-container d-flex justify-content-start">
+  <div
+    class="card card-custom"
+    *ngFor="let task of todoService.tasksList"
+    [class.task-completed]="task.done"
+  >
+    <i
+      class="bi bi-check-circle text-center"
+      *ngIf="task.done"
+      [class.task-completed_icon]="task.done"
+      (click)="taskDone(task)"
+    ></i>
+    <div
+      class="card-body d-flex flex-column justify-content-between p-0 text-center"
+    >
+      <p class="card-data">{{ task.data | date }}</p>
+      <p class="card-text">{{ task.text }}</p>
+      <div class="btn-group">
+        <button
+          class="btn btn-custom btn-approve"
+          (click)="taskDone(task)"
+          [disabled]="task.done"
+        >
+          <i class="bi bi-check-circle"></i>
+        </button>
+        <button
+          class="btn btn-custom btn-delete"
+          (click)="deleteTask(task)"
+          [disabled]="task.done"
+        >
+          <i class="bi bi-trash2"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

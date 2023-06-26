@@ -1,55 +1,26 @@
 .todo-header {
-  background-color: #1e272e;
   color: #4bcffa;
-  height: 100vh;
+  min-height: 180px;
+  background: #1e272e;
 }
 
-.tasks-container {
-  background-color: #808e9b;
-  height: 80vh;
+.todo-header button:first-child {
+  margin-right: 10px;
 }
-
-.task-completed {
-  background-color: #05c46b;
-  border-color: #05c46b;
-  color: #fff;
-}
-
-.task-completed_icon {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #00000070;
-  z-index: 1;
-  font-size: 9rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-}
-
-.card-data {
-  background-color: #1e272e;
-  color: #4bcffa;
-  padding: 12px;
-}
-
-.card-custom {
-  margin: 25px;
-  width: 250px;
-  height: 250px;
-  padding: 0;
-  border: 25px;
-  background-color: #485460;
-  color: #4bcffa;
-  font-weight: 700;
-  box-shadow: 0px 20px 38px 8px rgba(30, 39, 46, 1);
+label {
+  margin-right: 10px;
 }
 
 input {
   background-color: #485460;
   border-radius: 10px;
   border-color: #4bcffa;
+  color: #4bcffa;
+}
+
+input:focus {
+  background-color: #485460;
+  color: #4bcffa;
 }
 
 input[type="date"] {
@@ -60,21 +31,13 @@ input[type="date"] {
   color: #4bcffa;
 }
 
-.btn-group .btn-custom {
-  background-color: #1e272e;
-  color: #4bcffa;
-  border: 1px solid #4bcffa;
-  transition: ease 0.5s;
+.btn-add_task {
+  background: #3c40c6;
+  border-color: #3c40c6;
 }
 
-.btn-group .btn-custom:hover {
-  background-color: #485460;
-}
-
-.btn-group .btn-approve {
-  border-top-left-radius: 0;
-}
-
-.btn-group .btn-delete {
-  border-top-right-radius: 0;
+.btn-clear_all {
+  background: #575fcf;
+  border-color: #575fcf;
+  color: #fff;
 }
